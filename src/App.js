@@ -25,6 +25,7 @@ function App() {
       {actors.map((item) => {
         return (
           <div className="actor">
+            <h2>{item.category}</h2>
             <img src={item.img} alt="" width={300} height={350} />
             <h1>{item.name}</h1>
             <p>{item.birthday}</p>
