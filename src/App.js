@@ -27,6 +27,7 @@ function App() {
           <div className="actor">
             <img src={item.img} alt="" width={300} height={350} />
             <h1>{item.name}</h1>
+            <p>{item.birthday}</p>
           </div>
         );
       })}
