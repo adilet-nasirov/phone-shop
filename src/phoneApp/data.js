@@ -35,7 +35,7 @@ export const data = [
     name: "Galaxy Z Flip3 5G 128GB",
     price: 699,
     count: 0,
-    id: 4,
+    id: 5,
     image:
       "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6468/6468290_sd.jpg;maxHeight=240;maxWidth=350",
   },
@@ -43,7 +43,7 @@ export const data = [
     name: "Galaxy Z Fold3 5G 256GB",
     price: 1399,
     count: 0,
-    id: 4,
+    id: 6,
     image:
       "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6494/6494471_sd.jpg;maxHeight=240;maxWidth=350",
   },
@@ -51,7 +51,7 @@ export const data = [
     name: "iPhone 11",
     price: 499,
     count: 0,
-    id: 4,
+    id: 7,
     image:
       "https://pisces.bbystatic.com/image2/BestBuy_US/Gallery/SOL-55300-iphone11-106365.jpg",
   },
