@@ -2,23 +2,15 @@ import { useState, useEffect } from "react";
 import "./App.css";
 function App() {
   const API = "https://breakingbadapi.com/api/characters";
-  const [actors, setActors] = useState([]);
-
-  useEffect(() => {
-    fetchDataFromAPI();
-  }, []);
-
-  const fetchDataFromAPI = async () => {
-    //need to fech data
-    try {
-      const req = await fetch(API);
-      const data = await req.json();
-      setActors(data);
-      console.log(data);
-    } catch (err) {
-      console.log(err);
-    }
+  const [actors, setActor] = useState([]);
+  const fetchData = async () => {
+    const responce = await fetch(API);
+    const data = await responce.json();
+    setActor(data);
   };
+  useEffect(() => {
+    fetchData();
+  }, []);
 
   return (
     <div className="App">
