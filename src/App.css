@@ -1,0 +1,11 @@
+body {
+  background-color: aliceblue;
+  margin: 0;
+  padding: 50px;
+}
+.App {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 20px;
+  text-align: center;
+}

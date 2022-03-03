@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import "./App.css";
 function App() {
   const API = "https://breakingbadapi.com/api/characters";
   const [actors, setActors] = useState([]);
@@ -24,7 +25,7 @@ function App() {
       {actors.map((item) => {
         return (
           <div className="actor">
-            <img src={item.img} alt="" width={200} />
+            <img src={item.img} alt="" width={300} height={350} />
             <h1>{item.name}</h1>
           </div>
         );
