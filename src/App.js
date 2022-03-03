@@ -28,6 +28,7 @@ function App() {
             <h2>{item.category}</h2>
             <img src={item.img} alt="" width={300} height={350} />
             <h1>{item.name}</h1>
+            <p>Nickname:{item.nickname}</p>
             <p>{item.birthday}</p>
           </div>
         );
