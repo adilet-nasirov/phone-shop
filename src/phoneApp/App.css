@@ -2,14 +2,17 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  display: flex;
+  justify-content: center;
 }
 .App {
-  margin: 20px 300px;
-  padding: 0px 100px;
+  width: 800px;
+  margin: 30px 20px;
 }
 .phone {
   display: flex;
   justify-content: start;
+  margin-top: 20px;
   padding: 20px 15px;
 }
 img {
@@ -47,4 +50,24 @@ p {
 .minus:hover {
   color: red;
   background-color: white;
+}
+.navbar {
+  background-color: rgb(59, 62, 65);
+  box-sizing: border-box;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 20px;
+  top: 0;
+  overflow: hidden;
+  position: fixed;
+  width: 800px;
+}
+ul {
+  display: flex;
+  list-style: none;
+}
+li {
+  margin: 5px;
+  font-size: large;
 }

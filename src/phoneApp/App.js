@@ -2,6 +2,8 @@ import { useState } from "react";
 import "./App.css";
 import { data } from "./data";
 import Phones from "./phones";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Navbar from "./Navbar";
 function App() {
   const [phoneData, setData] = useState(data);
   const [total, setTotal] = useState(0);
@@ -28,11 +30,9 @@ function App() {
   };
   return (
     <div className="App">
-      {phoneData.map((item) => {
-        return (
-          <Phones item={item} increase={increaseNum} decrease={decreaseNum} />
-        );
-      })}
+      <Navbar />
+      <Phones increase={increaseNum} decrease={decreaseNum} data={phoneData} />
+
       <div>
         <h1>total: ${total}</h1>
       </div>
