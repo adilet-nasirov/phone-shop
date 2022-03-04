@@ -1,6 +1,6 @@
 import React from "react";
 
-const Phones = ({ increase, decrease, item, data }) => {
+const Phones = ({ increase, decrease, item, data, total }) => {
   return (
     <div>
       {data.map((item) => {
@@ -31,6 +31,9 @@ const Phones = ({ increase, decrease, item, data }) => {
           </div>
         );
       })}
+      <div>
+        <h1>total: ${total}</h1>
+      </div>
     </div>
   );
 };
