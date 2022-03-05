@@ -1,40 +1,35 @@
 import React from "react";
+import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
-const Phones = ({ increase, decrease, item, data, total }) => {
+const Phones = () => {
+  const [fortniteData, setData] = useState([]);
+  const fetchData = async () => {
+    const req = await fetch(
+      "https://fortnite-api.theapinetwork.com/upcoming/get"
+    );
+    const items = await req.json();
+    setData(items.data);
+  };
+  useEffect(() => {
+    fetchData();
+  }, []);
+  console.log(fortniteData);
   return (
-    <div>
-      {data.map((item) => {
-        return (
-          <div key={item.id}>
-            <hr />
-            <div className="phone">
-              <div className="phoneImg">
-                <img src={item.image} alt="" />
-              </div>
-              <div className="phoneInfo">
-                <h1>{item.name}</h1>
-                <h3>${item.price}</h3>
-                <div className="adder">
-                  <p className="plus" onClick={() => increase(item.id)}>
-                    +
-                  </p>
-                  <p>{item.count}</p>
-                  <p className="minus" onClick={() => decrease(item.id)}>
-                    -
-                  </p>
-                </div>
-              </div>
-              <div>
-                <h1>${item.count * item.price}</h1>
-              </div>
-            </div>
-          </div>
-        );
-      })}
+    <center>
+      <h1 style={{ marginTop: "4.5rem" }}>Fortnite Shop</h1>
       <div>
-        <h1>total: ${total}</h1>
+        {fortniteData.map((item) => {
+          return (
+            <div key={item.itemId}>
+              <Link to={`/phones/${item.itemId}`}>
+                <h3>{item.item.name}</h3>
+              </Link>
+            </div>
+          );
+        })}
       </div>
-    </div>
+    </center>
   );
 };
 
