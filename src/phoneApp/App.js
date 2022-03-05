@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Navbar from "./Navbar";
 import About from "./About";
 import Home from "./Home";
+import ItemInfo from "./ItemInfo";
 function App() {
   const [phoneData, setData] = useState(data);
   const [total, setTotal] = useState(0);
@@ -36,18 +37,9 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route
-            path="/phones"
-            element={
-              <Phones
-                increase={increaseNum}
-                decrease={decreaseNum}
-                data={phoneData}
-                total={total}
-              />
-            }
-          />
+          <Route path="/phones" element={<Phones />} />
           <Route path="/about" element={<About />} />
+          <Route path="/phones/:id" element={<ItemInfo />} />
         </Routes>
       </div>
     </Router>

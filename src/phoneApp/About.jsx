@@ -2,9 +2,9 @@ import React from "react";
 
 const About = () => {
   return (
-    <center>
-      <h2 style={{ margin: "100px" }}>This is About Page</h2>
-    </center>
+    <div>
+      <h1 style={{ marginTop: "4rem" }}>THis is about bp\\ page</h1>
+    </div>
   );
 };
 
