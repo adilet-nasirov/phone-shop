@@ -14,7 +14,6 @@ const Phones = () => {
   useEffect(() => {
     fetchData();
   }, []);
-  console.log(fortniteData);
   return (
     <center>
       <h1 style={{ marginTop: "4.5rem" }}>Fortnite Shop</h1>
